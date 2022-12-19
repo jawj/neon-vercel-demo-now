@@ -23,78 +23,53 @@ export default function Home() {
 function Timings() {
   // some dubious copy-and-paste coding here, but useSWR does hate to be called in a loop ...
 
-  const { data: a_1 } = useSWR<ResponseData>(/*        */ `/api/now?db=neon&tls=subtls&fast=no&coalesce=no&x=1`);
-  const { data: a_2 } = useSWR<ResponseData>(() => a_1 && `/api/now?db=neon&tls=subtls&fast=no&coalesce=no&x=2`);
-  const { data: a_3 } = useSWR<ResponseData>(() => a_2 && `/api/now?db=neon&tls=subtls&fast=no&coalesce=no&x=3`);
-  const { data: a_4 } = useSWR<ResponseData>(() => a_3 && `/api/now?db=neon&tls=subtls&fast=no&coalesce=no&x=4`);
-  const { data: a_5 } = useSWR<ResponseData>(() => a_4 && `/api/now?db=neon&tls=subtls&fast=no&coalesce=no&x=5`);
+  const { data: a1 } = useSWR<ResponseData>(/*        */ `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=1`);
+  const { data: a2 } = useSWR<ResponseData>(() => a1 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=2`);
+  const { data: a3 } = useSWR<ResponseData>(() => a2 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=3`);
+  const { data: a4 } = useSWR<ResponseData>(() => a3 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=4`);
+  const { data: a5 } = useSWR<ResponseData>(() => a4 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=5`);
+  const { data: a6 } = useSWR<ResponseData>(() => a5 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=6`);
+  const { data: a7 } = useSWR<ResponseData>(() => a6 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=7`);
+  const { data: a8 } = useSWR<ResponseData>(() => a7 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=8`);
+  const { data: a9 } = useSWR<ResponseData>(() => a8 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=9`);
+  const { data: aa } = useSWR<ResponseData>(() => a9 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=a`);
+  const { data: ab } = useSWR<ResponseData>(() => aa && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=b`);
+  const { data: ac } = useSWR<ResponseData>(() => ab && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=c`);
+  const { data: ad } = useSWR<ResponseData>(() => ac && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=d`);
+  const { data: ae } = useSWR<ResponseData>(() => ad && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=e`);
+  const { data: af } = useSWR<ResponseData>(() => ae && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=f`);
 
-  const { data: b_1 } = useSWR<ResponseData>(() => a_5 && `/api/now?db=gm&tls=subtls&fast=no&coalesce=no&x=1`);
-  const { data: b_2 } = useSWR<ResponseData>(() => b_1 && `/api/now?db=gm&tls=subtls&fast=no&coalesce=no&x=2`);
-  const { data: b_3 } = useSWR<ResponseData>(() => b_2 && `/api/now?db=gm&tls=subtls&fast=no&coalesce=no&x=3`);
-  const { data: b_4 } = useSWR<ResponseData>(() => b_3 && `/api/now?db=gm&tls=subtls&fast=no&coalesce=no&x=4`);
-  const { data: b_5 } = useSWR<ResponseData>(() => b_4 && `/api/now?db=gm&tls=subtls&fast=no&coalesce=no&x=5`);
+  const { data: b1 } = useSWR<ResponseData>(() => af && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=1`);
+  const { data: b2 } = useSWR<ResponseData>(() => b1 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=2`);
+  const { data: b3 } = useSWR<ResponseData>(() => b2 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=3`);
+  const { data: b4 } = useSWR<ResponseData>(() => b3 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=4`);
+  const { data: b5 } = useSWR<ResponseData>(() => b4 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=5`);
+  const { data: b6 } = useSWR<ResponseData>(() => b5 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=6`);
+  const { data: b7 } = useSWR<ResponseData>(() => b6 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=7`);
+  const { data: b8 } = useSWR<ResponseData>(() => b7 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=8`);
+  const { data: b9 } = useSWR<ResponseData>(() => b8 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=9`);
+  const { data: ba } = useSWR<ResponseData>(() => b9 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=a`);
+  const { data: bb } = useSWR<ResponseData>(() => ba && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=b`);
+  const { data: bc } = useSWR<ResponseData>(() => bb && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=c`);
+  const { data: bd } = useSWR<ResponseData>(() => bc && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=d`);
+  const { data: be } = useSWR<ResponseData>(() => bd && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=e`);
+  const { data: bf } = useSWR<ResponseData>(() => be && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=f`);
 
-  const { data: c_1 } = useSWR<ResponseData>(() => b_5 && `/api/now?db=gm&tls=wss&fast=no&coalesce=no&x=1`);
-  const { data: c_2 } = useSWR<ResponseData>(() => c_1 && `/api/now?db=gm&tls=wss&fast=no&coalesce=no&x=2`);
-  const { data: c_3 } = useSWR<ResponseData>(() => c_2 && `/api/now?db=gm&tls=wss&fast=no&coalesce=no&x=3`);
-  const { data: c_4 } = useSWR<ResponseData>(() => c_3 && `/api/now?db=gm&tls=wss&fast=no&coalesce=no&x=4`);
-  const { data: c_5 } = useSWR<ResponseData>(() => c_4 && `/api/now?db=gm&tls=wss&fast=no&coalesce=no&x=5`);
 
-  const { data: d_1 } = useSWR<ResponseData>(() => c_5 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=1`);
-  const { data: d_2 } = useSWR<ResponseData>(() => d_1 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=2`);
-  const { data: d_3 } = useSWR<ResponseData>(() => d_2 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=3`);
-  const { data: d_4 } = useSWR<ResponseData>(() => d_3 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=4`);
-  const { data: d_5 } = useSWR<ResponseData>(() => d_4 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=no&x=5`);
-
-  const { data: e_1 } = useSWR<ResponseData>(() => d_5 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=1`);
-  const { data: e_2 } = useSWR<ResponseData>(() => e_1 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=2`);
-  const { data: e_3 } = useSWR<ResponseData>(() => e_2 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=3`);
-  const { data: e_4 } = useSWR<ResponseData>(() => e_3 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=4`);
-  const { data: e_5 } = useSWR<ResponseData>(() => e_4 && `/api/now?db=gm&tls=wss&fast=yes&coalesce=yes&x=5`);
+  function durations(...rs: (ResponseData | undefined)[]) {
+    return rs.sort().map(r => <>{r?.duration ?? '...'} ms {' &nbsp; '}</>)
+  }
 
   return <>
-    <h2>Timings</h2>
+    <h2>Timings: single <code>SELECT now();</code>, 5 trials</h2>
     <ul>
       <li>
-        Ordinary WebSocket (ws://) + <a href="https://github.com/jawj/subtls">subtls</a> to separate proxy and Neon DB:<br />
-        {a_1?.duration ?? '...'} ms, {' '}
-        {a_2?.duration ?? '...'} ms, {' '}
-        {a_3?.duration ?? '...'} ms, {' '}
-        {a_4?.duration ?? '...'} ms, {' '}
-        {a_5?.duration ?? '...'} ms {' '}
-      </li>
-      <li>
-        Ordinary WebSocket (ws://) + <a href="https://github.com/jawj/subtls">subtls</a> to co-located proxy and DB:<br />
-        {b_1?.duration ?? '...'} ms, {' '}
-        {b_2?.duration ?? '...'} ms, {' '}
-        {b_3?.duration ?? '...'} ms, {' '}
-        {b_4?.duration ?? '...'} ms, {' '}
-        {b_5?.duration ?? '...'} ms  {' '}
-      </li>
-      <li>
-        Secure WebSocket (wss://) to co-located proxy and DB:<br />
-        {c_1?.duration ?? '...'} ms, {' '}
-        {c_2?.duration ?? '...'} ms, {' '}
-        {c_3?.duration ?? '...'} ms, {' '}
-        {c_4?.duration ?? '...'} ms, {' '}
-        {c_5?.duration ?? '...'} ms  {' '}
-      </li>
-      <li>
         Secure WebSocket (wss://) to co-located proxy and DB, pipelined:<br />
-        {d_1?.duration ?? '...'} ms, {' '}
-        {d_2?.duration ?? '...'} ms, {' '}
-        {d_3?.duration ?? '...'} ms, {' '}
-        {d_4?.duration ?? '...'} ms, {' '}
-        {d_5?.duration ?? '...'} ms  {' '}
+        {durations(a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af)}
       </li>
       <li>
         Secure WebSocket (wss://) to co-located proxy and DB, pipelined, coalesced writes:<br />
-        {e_1?.duration ?? '...'} ms, {' '}
-        {e_2?.duration ?? '...'} ms, {' '}
-        {e_3?.duration ?? '...'} ms, {' '}
-        {e_4?.duration ?? '...'} ms, {' '}
-        {e_5?.duration ?? '...'} ms  {' '}
+        {durations(b1, b2, b3, b4, b5, b6, b7, b8, b9, ba, bb, bc, bd, be, bf)}
       </li>
     </ul>
   </>;
