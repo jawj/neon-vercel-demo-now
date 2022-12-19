@@ -59,11 +59,13 @@ function Timings() {
   function durations(...rs: (ResponseData | undefined)[]) {
     return rs
       .sort((a, b) => (a?.duration ?? 0) - (b?.duration ?? 0))
-      .map(r => <>{r?.duration ?? '...'} ms &nbsp; {' '}</>)
+      .map((r, i) => <span key={i} style={{ fontWeight: i === 8 ? 'bold' : 'normal' }}>
+        {r?.duration ?? '...'} ms &nbsp; {' '}
+      </span>)
   }
 
   return <>
-    <h2>Timings: single <code>SELECT now();</code>, 5 trials</h2>
+    <h2>Timings: single <code>SELECT now();</code> — 15 trials</h2>
     <ul>
       <li>
         Secure WebSocket (wss://) to co-located proxy and DB, pipelined:<br />
