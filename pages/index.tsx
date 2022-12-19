@@ -57,7 +57,9 @@ function Timings() {
 
 
   function durations(...rs: (ResponseData | undefined)[]) {
-    return rs.sort().map(r => <>{r?.duration ?? '...'} ms {' &nbsp; '}</>)
+    return rs
+      .sort((a, b) => (a?.duration ?? 0) - (b?.duration ?? 0))
+      .map(r => <>{r?.duration ?? '...'} ms &nbsp; {' '}</>)
   }
 
   return <>
