@@ -59,7 +59,7 @@ function Timings() {
   function durations(...rs: (ResponseData | undefined)[]) {
     return rs
       .sort((a, b) => (a?.duration ?? 0) - (b?.duration ?? 0))
-      .map((r, i) => <span key={i} style={{ fontWeight: i === 8 ? 'bold' : 'normal' }}>
+      .map((r, i) => <span key={i} style={{ fontWeight: i === 7 ? 'bold' : 'normal' }}>
         {r?.duration ?? '...'} ms &nbsp; {' '}
       </span>)
   }
