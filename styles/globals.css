@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 2em 4em;
+  background: #fff;
+  font: 14px/1.25 sans-serif;
+}
+
+h1 {
+  padding: 0 0 .33em;
+  margin: 0 0 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+
+h2 {
+  clear: both;
+  padding-top: 1em;
+}
+
+.loading {
+  text-align: center;
+  color: #aaa;
+}
+
+.sites ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sites li {
+  display: block;
+  float: left;
+  margin: 1ex;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #55e;
+}
+
+.sites li a {
+  display: block;
+  width: 12em;
+  height: 16em;
+  padding: 0;
+  border-radius: 1em;
+  background-size: cover;
+  background-color: #88e;
+  color: #fff;
+}
+
+.sites li a:hover .name {
+  padding-top: 1.5em;
+}
+
+.name {
+  display: block;
+  font-weight: bold;
+  padding: .9em 1em .1em;
+  background: rgba(0, 0, 0, .4);
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  transition: padding-top .2s;
+}
+
+.category {
+  display: block;
+  padding: .1em 1em;
+  background: rgba(0, 0, 0, .4);
+}
+
+.distance {
+  display: block;
+  padding: .1em 1em .75em;
+  background: rgba(0, 0, 0, .4);
+  color: rgba(255, 255, 255, .75)
+}
+
+p {
+  clear: both;
+  padding-top: 1.5em;
+}
