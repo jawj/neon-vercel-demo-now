@@ -25,8 +25,10 @@ export default async function handler(req: NextRequest) {
   const fast = queryParams.fast === 'yes';
   const coalesce = queryParams.coalesce === 'yes';
 
+  neonConfig.wsProxy = 'ws.manipulexity.com/v1';
   neonConfig.useSecureWebSocket = neonConfig.disableTLS = wss;
-  neonConfig.fastStart = fast;
+  neonConfig.pipelineConnect = fast ? 'passwordAuth' : false;
+  neonConfig.pipelineTLS = fast;
   neonConfig.coalesceWrites = coalesce;
 
   const t0 = Date.now();
