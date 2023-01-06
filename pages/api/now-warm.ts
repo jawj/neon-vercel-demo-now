@@ -27,6 +27,8 @@ client.connect();
 
 const start = Date.now();
 
+// NOTE: this doesn't seem to work -- it regularly hangs
+
 export default async function handler(req: NextRequest) {
   const t0 = Date.now();
   const { rows: [now] } = await client.query(`select now()`);
